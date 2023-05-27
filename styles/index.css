@@ -72,12 +72,12 @@ body {
 }
 
 .bg-bubbles {
-  background: url("./images/background_header.png");
+  background: url("../images/background_header.png");
   background-position: center;
 }
 
 .bg-lines {
-  background: url("./images/lines.png");
+  background: url("../images/lines.png");
   background-repeat: no-repeat;
   background-position-x: center;
 }
