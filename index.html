@@ -5,20 +5,185 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>tocha</title>
   </head>
   <body>
-    <div class="container">
-      <header class="header">
-        <div class="header_logo">
-          <img src="./images/logo.png" alt="tocha-logo" />
-          <span>tocha</span>
+    <div class="bg-bubbles">
+      <div class="container">
+        <header class="header">
+          <div class="header_logo row">
+            <img src="./images/logo.png" alt="tocha-logo" />
+            <div class="header_logo-name fw-700">tocha</div>
+          </div>
+          <div class="header_auth row">
+            <div class="btn log fw-700">Вход</div>
+            <div class="btn reg">Регистрация</div>
+          </div>
+        </header>
+      </div>
+
+      <div class="container">
+        <div class="title">
+          <div class="title_info">
+            <div class="title_info-text h fw-800" style="color: #685ed6">Telegram чат</div>
+            <div class="title_info-text fw-800 h">на вашем сайте</div>
+            <div class="title_info-text p">
+              Общение с клиентами станет простым и удобным, а подключение займет 5 минут. Первый
+              месяц — <span style="color: #685ed6">бесплатно!</span>
+            </div>
+            <div class="btn title_info-btn">Подключить</div>
+          </div>
+          <div class="title_image">
+            <img src="./images/mobile_chat.png" alt="mobile_chat" />
+          </div>
         </div>
-        <div class="header_auth">
-          <span>Вход</span>
-          <span>Регистрация</span>
-        </div>
-      </header>
+      </div>
     </div>
+    <div class="container">
+      <div class="description wrap">
+        <div class="description_text">
+          <h2>Tocha Online - это</h2>
+          <div class="description_text-item row">
+            <img class="icon" src="./images/description/1.png" alt="" />
+            <div class="column">
+              <div class="heading">Ничего лишнего</div>
+              <div class="paragraph">
+                Отсутствие лишних приложений для операторов. Оператору не нужно учиться работать с
+                чатом
+              </div>
+            </div>
+          </div>
+          <div class="description_text-item row">
+            <img class="icon" src="./images/description/2.png" alt="" />
+            <div class="column">
+              <div class="heading">Простота</div>
+              <div class="paragraph">Простая установка на сайт</div>
+            </div>
+          </div>
+          <div class="description_text-item row">
+            <img class="icon" src="./images/description/3.png" alt="" />
+            <div class="column">
+              <div class="heading">Несколько ассистентов</div>
+              <div class="paragraph">Возможность подключения нескольких ассистентов</div>
+            </div>
+          </div>
+          <div class="description_text-item row">
+            <img class="icon" src="./images/description/4.png" alt="" />
+            <div class="column">
+              <div class="heading">Кастомизация</div>
+              <div class="paragraph">Настройка интерфейса под нужды сайта</div>
+            </div>
+          </div>
+        </div>
+        <div class="description_image">
+          <img src="./images/iphone_chat.png" alt="iphone_chat" />
+        </div>
+      </div>
+    </div>
+    <div class="bg-white">
+      <div class="container">
+        <div class="tarifs column">
+          <div class="tarifs_title text-center">
+            <h2 class="fw-800">Тарифы</h2>
+            <p class="fw-700">Стоимость зависит от трафика сайта</p>
+          </div>
+          <div class="tarifs_card">
+            <div class="tarifs_card-item column text-center">
+              <div class="name fw-800">Бесплатно</div>
+              <div class="block column">
+                <div class="info fw-700">Пробный период на 1 месяц</div>
+                <div class="price">0₽/первый месяц</div>
+                <div class="btn">Подключить за 0₽</div>
+              </div>
+            </div>
+            <div class="tarifs_card-item column text-center">
+              <div class="name fw-800">Базовый</div>
+              <div class="block column">
+                <div class="info fw-700">Менее 1000 посещений в сутки</div>
+                <div class="price">200₽/первый месяц</div>
+                <div class="btn">Подключить за 200₽</div>
+              </div>
+            </div>
+            <div class="tarifs_card-item column text-center">
+              <div class="name fw-800">Премиум</div>
+              <div class="block column">
+                <div class="info fw-700">Более 1000 посещений в сутки</div>
+                <div class="price">500₽/первый месяц</div>
+                <div class="btn buy">Подключить за 500₽</div>
+              </div>
+            </div>
+          </div>
+          <div class="listing justify-between">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-bubbles">
+      <div class="container">
+        <div class="connection column text-center">
+          <div class="connection_title">
+            <h2 class="fw-800">Всего 3 шага для подключения Telegram чата</h2>
+          </div>
+          <div class="bg-lines row justify-between">
+            <div class="connection_steps column">
+              <div class="connection_steps-number fw-700">1</div>
+              <div class="connection_steps-info">
+                <h4 class="fw-800">Telegram bot</h4>
+                <div class="p">Вы создаёте Telegram бота для вашего сайта</div>
+              </div>
+
+              <div class="connection_steps-image">
+                <img src="./images/connection/1.png" alt="iphone" />
+              </div>
+            </div>
+            <div class="connection_steps column second">
+              <div class="connection_steps-number fw-700">2</div>
+              <div class="connection_steps-info">
+                <h4 class="fw-800">Подключение Tocha</h4>
+                <div class="p">Tocha подключает Telegram бота к вашиму сайту</div>
+              </div>
+
+              <div class="connection_steps-image">
+                <img src="./images/connection/2.png" alt="iphone" />
+              </div>
+            </div>
+            <div class="connection_steps column">
+              <div class="connection_steps-number fw-700">3</div>
+              <div class="connection_steps-info">
+                <h4 class="fw-800">Telegram-чат</h4>
+                <div class="p">Консультант отвечает на вопросы посетителей сайта</div>
+              </div>
+
+              <div class="connection_steps-image">
+                <img src="./images/connection/3.png" alt="iphone" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feedback">
+        <div class="feedback_title"></div>
+        <div class="feedback_items"></div>
+      </div>
+    </div>
+    <div class="bg-white">
+      <div class="container">
+        <div class="form"></div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer_logo"></div>
+      <div class="footer_about"></div>
+      <div class="footer_help"></div>
+    </footer>
   </body>
 </html>
