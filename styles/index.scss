@@ -8,7 +8,14 @@
 body {
   background: rgba(242, 247, 255, 0.5);
 }
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
 .fw-700 {
   font-weight: 700;
 }
@@ -46,8 +53,11 @@ body {
   margin-right: 12px;
 }
 .reg {
-  background: #685ed6 !important;
+  background: rgb(104, 94, 214) !important;
   color: #ffffff !important;
+}
+.pad-50 {
+  padding: 50px 0;
 }
 .container {
   max-width: 1140px;
@@ -67,13 +77,27 @@ body {
   background-repeat: no-repeat;
   background-position-x: center;
 }
-
+.listing {
+  width: 70px;
+  display: none;
+  height: 20px;
+  padding-bottom: 54px;
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    border: 2px #685ed6 solid;
+  }
+  .circle:hover {
+    background: #685ed6;
+  }
+}
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 32px;
-
+  padding-bottom: 6px;
   &_logo {
     &-name {
       font-size: 29px;
@@ -130,7 +154,7 @@ body {
         font-weight: 400;
         font-size: 16px;
         line-height: 26px;
-        width: 380px;
+        max-width: 380px;
       }
     }
   }
@@ -171,7 +195,7 @@ body {
       background: #f3f7f9;
       border-radius: 6px;
       overflow: hidden;
-      box-shadow: 0 0 20px 1px #c9c9d2;
+      box-shadow: 0 0 15px 1px #c9c9d2;
       .name {
         background: rgba(102, 91, 218, 0.05);
         color: #685ed6;
@@ -200,23 +224,9 @@ body {
       }
     }
   }
-  div.listing {
-    width: 70px;
-    display: none;
-    height: 20px;
-    padding-bottom: 54px;
-    .circle {
-      width: 10px;
-      height: 10px;
-      border-radius: 50px;
-      border: 2px #685ed6 solid;
-    }
-    .circle:hover {
-      background: #685ed6;
-    }
-  }
 }
 .connection {
+  display: flex;
   &_title {
     padding-bottom: 56px;
     > h2 {
@@ -264,6 +274,109 @@ body {
     }
   }
 }
+.feedback {
+  background: url("../images/feedback-image.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding-bottom: 25px;
+  &_title > h3 {
+    font-size: 46px;
+    line-height: 64px;
+    padding: 17px 0 46px 0;
+    display: flex;
+    justify-content: center;
+  }
+  &_items {
+    &-card {
+      display: flex;
+      align-items: center;
+      .comment {
+        max-width: 540px;
+        background: #ffffff;
+        padding: 32px 32px 56px 32px;
+        border-radius: 6px;
+        position: relative;
+        box-shadow: 0 0 18px 1px #969797;
+      }
+      .comment::after {
+        content: "";
+        border: 13px solid transparent;
+        border-top: 13px solid rgb(255, 255, 255);
+        top: 100%;
+
+        position: absolute;
+      }
+      .client {
+        margin-top: 30px;
+        &_image {
+          margin-right: 16px;
+        }
+        &_text {
+          &-name {
+            font-size: 18px;
+            line-height: 28px;
+          }
+          &-site {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+.form {
+  background: url("../images/background_form.png");
+  display: flex;
+  justify-content: space-around;
+  border-radius: 6px;
+  align-items: center;
+  &_text {
+    &-title {
+      color: #ffffff;
+      font-size: 33px;
+      line-height: 41px;
+    }
+    &-submit {
+      form {
+        max-width: 368px;
+        border-radius: 6px;
+        overflow: hidden;
+        input {
+          padding: 14px 16px;
+          width: 248px;
+        }
+        button {
+          width: 120px;
+          background: black;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+.footer {
+  background: #1d2530;
+  padding: 70px 0;
+  color: #ffffff;
+  &_logo {
+    font-size: 24px;
+  }
+  &_about {
+    padding-right: 60px;
+  }
+  &-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 32px;
+  }
+  li {
+    line-height: 26px;
+    padding-bottom: 12px;
+    max-width: 216px;
+  }
+}
 @media screen and (max-width: 1000px) {
   .bg-lines {
     background: none;
@@ -281,8 +394,6 @@ body {
     padding-top: 50px;
     &_info {
       width: 270px;
-      .h {
-      }
     }
   }
   .paragraph {
@@ -339,7 +450,104 @@ body {
     max-width: 330px;
     margin: 0 auto;
   }
+  .header {
+    &_auth {
+      display: none;
+    }
+  }
   .title {
     justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+    &_info {
+      padding-bottom: 15px;
+    }
+  }
+  .description {
+    &_text {
+      &-item {
+        .paragraph {
+          width: 280px;
+        }
+      }
+    }
+    &_image > img {
+      width: 280px;
+      height: 447px;
+    }
+  }
+  .tarifs {
+    &_card {
+      &-item:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+  .connection {
+    display: flex;
+    align-items: center;
+    .listing {
+      display: flex !important;
+    }
+    &_steps:nth-child(2),
+    &_steps:nth-child(3) {
+      display: none;
+    }
+    &_title {
+      padding-bottom: 20px;
+    }
+    &_steps {
+      &-image {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+  .feedback {
+    &_title > h3 {
+      padding: 8px 0 22px 0;
+    }
+    &_items-card:nth-child(2) {
+      display: none;
+    }
+  }
+  .form {
+    flex-wrap: wrap;
+    background: #685ed6;
+    &_text {
+      &-title {
+        font-size: 24px;
+        line-height: 32px;
+        padding: 8px;
+      }
+      &-submit {
+        form {
+          max-width: 300px;
+          border-radius: 6px;
+          overflow: hidden;
+          margin: 8px;
+          input {
+            padding: 14px 16px;
+            width: 155px;
+          }
+          button {
+            width: 120px;
+            background: black;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    &_logo {
+      margin-right: 28px;
+    }
+    &_about {
+      padding-bottom: 30px;
+    }
+    &-title {
+      padding-bottom: 16px;
+    }
   }
 }

@@ -10,6 +10,16 @@ body {
   background: rgba(242, 247, 255, 0.5);
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
 .fw-700 {
   font-weight: 700;
 }
@@ -56,8 +66,12 @@ body {
 }
 
 .reg {
-  background: #685ed6 !important;
+  background: rgb(104, 94, 214) !important;
   color: #ffffff !important;
+}
+
+.pad-50 {
+  padding: 50px 0;
 }
 
 .container {
@@ -82,11 +96,28 @@ body {
   background-position-x: center;
 }
 
+.listing {
+  width: 70px;
+  display: none;
+  height: 20px;
+  padding-bottom: 54px;
+}
+.listing .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  border: 2px #685ed6 solid;
+}
+.listing .circle:hover {
+  background: #685ed6;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 32px;
+  padding-bottom: 6px;
 }
 .header_logo-name {
   font-size: 29px;
@@ -146,7 +177,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  width: 380px;
+  max-width: 380px;
 }
 .description_image > img {
   width: 412px;
@@ -184,7 +215,7 @@ body {
   background: #f3f7f9;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 0 20px 1px #c9c9d2;
+  box-shadow: 0 0 15px 1px #c9c9d2;
 }
 .tarifs_card-item .name {
   background: rgba(102, 91, 218, 0.05);
@@ -211,22 +242,10 @@ body {
   font-size: 18px;
   line-height: 24px;
 }
-.tarifs div.listing {
-  width: 70px;
-  display: none;
-  height: 20px;
-  padding-bottom: 54px;
-}
-.tarifs div.listing .circle {
-  width: 10px;
-  height: 10px;
-  border-radius: 50px;
-  border: 2px #685ed6 solid;
-}
-.tarifs div.listing .circle:hover {
-  background: #685ed6;
-}
 
+.connection {
+  display: flex;
+}
 .connection_title {
   padding-bottom: 56px;
 }
@@ -271,6 +290,103 @@ body {
 .connection_steps-image > img {
   width: 227px;
   height: 466px;
+}
+
+.feedback {
+  background: url("../images/feedback-image.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding-bottom: 25px;
+}
+.feedback_title > h3 {
+  font-size: 46px;
+  line-height: 64px;
+  padding: 17px 0 46px 0;
+  display: flex;
+  justify-content: center;
+}
+.feedback_items-card {
+  display: flex;
+  align-items: center;
+}
+.feedback_items-card .comment {
+  max-width: 540px;
+  background: #ffffff;
+  padding: 32px 32px 56px 32px;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 0 0 18px 1px #969797;
+}
+.feedback_items-card .comment::after {
+  content: "";
+  border: 13px solid transparent;
+  border-top: 13px solid rgb(255, 255, 255);
+  top: 100%;
+  position: absolute;
+}
+.feedback_items-card .client {
+  margin-top: 30px;
+}
+.feedback_items-card .client_image {
+  margin-right: 16px;
+}
+.feedback_items-card .client_text-name {
+  font-size: 18px;
+  line-height: 28px;
+}
+.feedback_items-card .client_text-site {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.form {
+  background: url("../images/background_form.png");
+  display: flex;
+  justify-content: space-around;
+  border-radius: 6px;
+  align-items: center;
+}
+.form_text-title {
+  color: #ffffff;
+  font-size: 33px;
+  line-height: 41px;
+}
+.form_text-submit form {
+  max-width: 368px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.form_text-submit form input {
+  padding: 14px 16px;
+  width: 248px;
+}
+.form_text-submit form button {
+  width: 120px;
+  background: black;
+  color: #ffffff;
+}
+
+.footer {
+  background: #1d2530;
+  padding: 70px 0;
+  color: #ffffff;
+}
+.footer_logo {
+  font-size: 24px;
+}
+.footer_about {
+  padding-right: 60px;
+}
+.footer-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  padding-bottom: 32px;
+}
+.footer li {
+  line-height: 26px;
+  padding-bottom: 12px;
+  max-width: 216px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -342,7 +458,81 @@ body {
     max-width: 330px;
     margin: 0 auto;
   }
+  .header_auth {
+    display: none;
+  }
   .title {
     justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+  }
+  .title_info {
+    padding-bottom: 15px;
+  }
+  .description_text-item .paragraph {
+    width: 280px;
+  }
+  .description_image > img {
+    width: 280px;
+    height: 447px;
+  }
+  .tarifs_card-item:nth-child(2) {
+    display: none;
+  }
+  .connection {
+    display: flex;
+    align-items: center;
+  }
+  .connection .listing {
+    display: flex !important;
+  }
+  .connection_steps:nth-child(2), .connection_steps:nth-child(3) {
+    display: none;
+  }
+  .connection_title {
+    padding-bottom: 20px;
+  }
+  .connection_steps-image {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .feedback_title > h3 {
+    padding: 8px 0 22px 0;
+  }
+  .feedback_items-card:nth-child(2) {
+    display: none;
+  }
+  .form {
+    flex-wrap: wrap;
+    background: #685ed6;
+  }
+  .form_text-title {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 8px;
+  }
+  .form_text-submit form {
+    max-width: 300px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 8px;
+  }
+  .form_text-submit form input {
+    padding: 14px 16px;
+    width: 155px;
+  }
+  .form_text-submit form button {
+    width: 120px;
+    background: black;
+    color: #ffffff;
+  }
+  .footer_logo {
+    margin-right: 28px;
+  }
+  .footer_about {
+    padding-bottom: 30px;
+  }
+  .footer-title {
+    padding-bottom: 16px;
   }
 }/*# sourceMappingURL=index.css.map */
